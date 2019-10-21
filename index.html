@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Awesome Product Card Design</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="product_card">
+		<h1>Original Shows</h1>
+		<p>Lorem ipsum dolor sit amet.</p>
+		<div class="product_pic"></div>
+		<div class="product_color">
+			<span class="blue active" data-color="#7ed6df" data-pic="url(1.png)"></span>
+			<span class="green" data-color="#badc58" data-pic="url(2.png)"></span>
+			<span class="yellow" data-color="#f9ca24" data-pic="url(3.png)"></span>
+			<span class="rose" data-color="#ff7979" data-pic="url(4.png)"></span>
+		</div>
+		<div class="product_info">
+			<div class="product_price">$90</div>
+			<a href="#" class="product_button">ADD TO CART</a>
+		</div>
+	</div>
+<!-- 
+
+
+-----/\\\\\\\\-------\/\\\------/\\\\\\\\\-------/\\\\\\\\\\\\\\\---/\\\\\\\\\\\\\\\-----/\\\\\\\\---------/\\\\\\\\\-------
+----/\\\\\\\\---------\/\\\----/\\\\\\\\\\\\\----\/\\\///////////---\/\\\///////////----/\\\--\\\\\\------/\\\\--\/\\\-------
+----\/\\\\\/\\\--------\/\\\---\/\\\/////////\\\--\/\\\--------------\/\\\--------------\/\\\---\\\\\\---\\\\\\---\/\\\-------
+-----\/\\\-\/\/\\\------\/\\\---\/\\\-------\/\\\--\/\\\\\\\\\\\------\/\\\\\\\\\\\------\/\\\----\\\\\\\\\\\\-----\/\\\-------
+------\/\\\----\/\\\-----\/\\\---\/\\\\\\\\\\\\\\\--\/\\\///////-------\/\\\///////-------\/\\\------\\\\\\\\-------\/\\\-------
+-------\/\\\-----\/\\\----\/\\\---\/\\\/////////\\\--\/\\\--------------\/\\\--------------\/\\\---------------------\/\\\-------
+--------\/\\\------\/\\\---\/\\\---\/\\\-------\/\\\--\/\\\--------------\/\\\--------------\/\\\---------------------\/\\\-------
+---------\/\\\-------\/\\\\\\/\\\---\/\\\-------\/\\\--\/\\\\\\\\\\\\\\\--\/\\\\\\\\\\\\\\\--\/\\\---------------------\/\\\-------
+----------\/\\\--------\/\\\\\/\\\---\///--------\///---\///////////////---\///////////////---\/\\\---------------------\/\\\-------
+
+
+ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(".product_color span").click(function(){
+			$(".product_color span").removeClass("active");
+			$(this).addClass("active");
+			$("body").css("background",$(this).attr("data-color"));
+			$(".product_price").css("color",$(this).attr("data-color"));
+			$(".product_button").css("color",$(this).attr("data-color"));
+			$(".product_pic").css("background-image",$(this).attr("data-pic"));
+		});
+	</script>
+</body>
+</html>
